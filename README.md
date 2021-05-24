@@ -1,2 +1,0 @@
-# freelancing
-Freelancing code excercises

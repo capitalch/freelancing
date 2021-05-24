@@ -1,0 +1,189 @@
+Array methods
+
+From, isArray, of, concat, fill, filter, find, findIndex, forEach, includes, indexOf, join, keys, lastIndexOf, map, pop, push, reduce, reduceRight, reverse, shift, slice, some, sort, splice, toString, unshift, values
+
+1.	Array.from(): New. Creates new instance from an array-like or iterable object.
+Array.from('foo') 
+// [ "f", "o", "o"]
+
+2.	Array.isArray()
+
+3.	Array.of(): New. Creates new instance from  variable number of arguments, regardless of number or type of the arguments.
+Array.of(1, 2, 3); // [1, 2, 3]
+
+4.	concat(): New. Merge two or more arrays.
+const letters = ['a', 'b', 'c'];
+const numbers = [1, 2, 3];
+letters.concat(numbers);
+// result in ['a', 'b', 'c', 1, 2, 3]
+
+5.	fill(): Modified. Changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). Returns modified array.
+
+6.	filter(callback): New. arr.filter(callback(element[, index, [array]])[, thisArg])
+
+
+7.	find(callback): Returns the value of the first element that satisfies the provided function. arr.find(callback(element[, index[, array]])[, thisArg])
+
+8.	findIndex(callback):Returns index of first element in the array that satisfies the provided testing function. Otherwise, it returns -1
+
+
+9.	forEach(callback): arr.forEach(callback(currentValue [, index [, array]])[, thisArg])
+
+10.	includes(): Determines whether an array includes a certain value. Returns true or false. arr.includes(valueToFind[, fromIndex])
+
+
+11.	indexOf(): First index at which a given element can be found in the array. -1 if not found. arr.indexOf(searchElement[, fromIndex])
+
+12.	join(): Joins array. Returns string. arr.join([separator])
+join(‘’) converts array to string
+
+13.	keys(): arr.keys()
+
+14.	lastIndexOf()
+
+15.	map(): new
+
+16.	pop(): returns last. Modifies array
+
+17.	push(): Modifies array. Returns new length of array
+
+18.	reduce(): Returns single value. arr.reduce((prevValue, current, index, arr)=>{}, initialValue)
+
+19.	reduceRight(): Works same but starts from right to left
+
+
+20.	reverse(): Modifies. Reverses in place. Returns reversed array.
+
+21.	shift(): Modifies. Removes first element from array and returns first element. Opposite of pop()
+
+
+22.	slice(): New. Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included). The original array not modified. arr.slice([start[, end]]). A negative index can be used, indicating an offset from the end of the sequence. slice(-2) extracts the last two elements in the sequence.If start is undefined, slice starts from the index 0.
+
+23.	some(callback): Tests whether at least one element in the array passes the test by provided function. Returns Boolean.
+
+
+24.	sort([comparefunction]): Modifies. Sorts the elements of an array in place and returns the sorted array. arr.sort([compareFunction]) 
+let numbers = [4, 2, 5, 1, 3];
+numbers.sort((a, b) => a - b);
+console.log(numbers);
+// [1, 2, 3, 4, 5]
+
+25.	splice(): Modifies. Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. 
+let arrDeletedItems = array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+const arr = [5,1,2,3,4,5]
+arr.splice(2,2,'a','b','c') // [5,1,'a','b','c', 4, 5]
+
+
+26.	toString(): For Array objects, the toString method joins the array and returns one string containing each array element separated by commas.
+
+
+27.	unshift(): Modifies. Adds one or more elements to the beginning of an array and returns the new length of the array. arr.unshift(element1[, ...[, elementN]])
+
+28.	values(): returns a new Array Iterator object that contains the values for each index in the array. arr.values()
+
+String methods
+charAt, concat, endswith, includes, indexOf, lastIndexOf, match, padEnd, padStart, repeat, replace, replaceAll, slice, split, startsWith, substring, toLowerCase, toUpperCase
+1.	length
+2.	charAt(n): Character at location
+
+3.	concat(): tr.concat(str2 [, ...strN])
+
+4.	endsWith(string): Returns true / false
+
+
+5.	includes(string): true / false
+
+6.	indexOf(string): str.indexOf(searchValue [, fromIndex])
+
+
+7.	lastIndexOf():str.lastIndexOf(searchValue[, fromIndex])
+
+8.	match(): matches against regex. str.match(regexp)
+
+
+9.	padEnd(): str.padEnd(targetLength [, padString])
+
+10.	padStart(): str.padStart(targetLength [, padString])
+11.	repeat(): Returns a new string which contains the specified number of copies of the string, concatenated together. str.repeat(count). 'abc'.repeat(2)     // 'abcabc'
+
+12.	replace(): New. const newStr = str.replace(regexp|substr, newSubstr|function). Replaces only first occurrence.
+
+
+13.	replaceAll(): New. 
+const newStr = str.replaceAll(regexp|substr, newSubstr|function)
+
+14.	slice(): New. Extracts a section of a string and returns it as a new string, without modifying the original string
+str.slice(beginIndex[, endIndex])
+
+15.	split(): str.split([separator[, limit]])
+
+16.	startsWith(): str.startsWith(searchString[, position])
+
+
+17.	substring(): new. str.substring(indexStart[, indexEnd]). substring() extracts characters from indexStart up to but not including indexEnd
+
+18.	toLowerCase(): str.toLowerCase()
+
+
+19.	toUpperCase(), trim(), trimStart(), trimEnd()
+
+Objects
+Object.keys(), Object.values(), Object.assign()
+Math
+1)	Math.ceil(0.5); //=> 1 (up)
+
+Math.floor(0.5); //=> 0 (down)
+
+Math.round(0.5); //=> 1 (nearest)
+
+Math.round(0.49); //=> 0
+Number.parseFloat() only accepts a single argument, the string that should be parsed into a floating-point number:
+
+Number.parseFloat('3.14159');
+//=> 3.14159
+
+2)	console.log(12 % 5); // expected output: 2
+
+3)	Number.isInteger(42) //=> true
+Number.isInteger(0.42) //=> false
+
+4)	Number.isNaN(10) //=> false
+5)	Number.isNaN(undefined) //=> false
+6)	Number.isNaN(NaN) //=> true
+
+7)	Number.parseInt()
+Accepts a string as its first argument and parses it as an integer. The second argument is the base that should be used in parsing (e.g., 2 for binary or 10 for decimal). For example, 100 is 100 in decimal but 4 in binary
+Number.parseInt('100', 10); //=> 100
+
+Number.parseInt('100', 2); //=> 4
+	
+Number.parseFloat('3.14159'); //=> 3.14159
+8)	Quotient is Math.floor(a/b), remainder is (a % b) 
+
+Common tips and tricks
+1.	Reverse a string
+return Array.from(S).reverse().join()
+
+2.	Get max from array
+Math.max(...A)
+
+3.	Divisor and remainder
+Quotient = Math.floor(a/b)
+Remainder = a % b
+4.	Convert to binary
+const n = 1234
+let binary = n.toString(2)
+5.	Unique value array
+const set = new Set([1, 2, 2, 3, 4, 5, 5])
+const arr3 = Array.of(...set)
+
+or
+const arrayWithUniqueItems = [...new Set([1, 2, 3, 3,])]
+6.	Convert array to object with indices as keys of object
+Const obj = {…arr}
+7.	Swap key / values of object
+const swapObj = {}
+    Object.entries(obj).forEach(([key, value])=>{
+        swapObj[value] = key
+    })
+
